@@ -41,7 +41,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "EloquentCsv\\EloquentCsvServiceProvider"
+                "Aardvark\\AardvarkServiceProvider"
             ]
         },
         "include_files": [
