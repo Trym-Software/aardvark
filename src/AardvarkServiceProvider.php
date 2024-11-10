@@ -12,7 +12,7 @@ class AardvarkServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__.'/../config/aadvark.php' => config_path('aadvark.php'),
+            __DIR__.'/../config/aardvark.php' => config_path('aardvark.php'),
         ]);
     }
 }

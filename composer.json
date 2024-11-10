@@ -21,7 +21,6 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "funkjedi/composer-include-files": "^1.1",
         "illuminate/support": "^11.0 || ^10.0 || ^9.0"
     },
     "require-dev": {
@@ -34,7 +33,6 @@
         "sort-packages": true,
         "lock": false,
         "allow-plugins": {
-            "funkjedi/composer-include-files": true,
             "pestphp/pest-plugin": true
         }
     },
@@ -43,10 +41,7 @@
             "providers": [
                 "Aardvark\\AardvarkServiceProvider"
             ]
-        },
-        "include_files": [
-            "helpers.php"
-        ]
+        }
     },
     "scripts": {
         "lint": "./vendor/bin/pint --test",
