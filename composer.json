@@ -1,0 +1,62 @@
+{
+    "name": "trym/aadvark",
+    "description": "Deferred config",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aardvark\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aardvark\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luke Spencer",
+            "email": "luke@trym.software"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "funkjedi/composer-include-files": "^1.1",
+        "illuminate/support": "^11.0 || ^10.0 || ^9.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^2.0",
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^9.0 || ^8.0",
+        "pestphp/pest": "^3.5"
+    },
+    "config": {
+        "sort-packages": true,
+        "lock": false,
+        "allow-plugins": {
+            "funkjedi/composer-include-files": true,
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EloquentCsv\\EloquentCsvServiceProvider"
+            ]
+        },
+        "include_files": [
+            "helpers.php"
+        ]
+    },
+    "scripts": {
+        "lint": "./vendor/bin/pint --test",
+        "lint-fix": "./vendor/bin/pint",
+        "analyse": "./vendor/bin/phpstan analyse",
+        "test": "./vendor/bin/pest --coverage --min=100",
+        "check": [
+            "@lint",
+            "@analyse",
+            "@test"
+        ]
+    }
+}
